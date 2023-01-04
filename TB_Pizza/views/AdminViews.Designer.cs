@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminViews));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReturnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,13 +92,14 @@
             // daftarPesananToolStripMenuItem
             // 
             this.daftarPesananToolStripMenuItem.Name = "daftarPesananToolStripMenuItem";
-            this.daftarPesananToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.daftarPesananToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.daftarPesananToolStripMenuItem.Text = "&Daftar Pesanan";
+            this.daftarPesananToolStripMenuItem.Click += new System.EventHandler(this.daftarPesananToolStripMenuItem_Click);
             // 
             // historyToolStripMenuItem
             // 
             this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
-            this.historyToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.historyToolStripMenuItem.Text = "&History";
             // 
             // masterToolStripMenuItem
@@ -146,6 +148,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(663, 503);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

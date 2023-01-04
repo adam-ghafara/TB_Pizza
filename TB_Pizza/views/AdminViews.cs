@@ -22,5 +22,11 @@ namespace TB_Pizza.views
             this.Hide();
             Application.Exit();
         }
+
+        private void daftarPesananToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form adminOrderGrid = new adminOrder();
+            adminOrderGrid.Show();
+        }
     }
 }
