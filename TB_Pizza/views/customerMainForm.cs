@@ -45,7 +45,7 @@ namespace TB_Pizza.views
 
         private void btAdmins_Click(object sender, EventArgs e)
         {
-            Form adminForm = new AdminViews();
+            Form adminForm = new extraOptions();
             adminForm.Show();
             this.Hide();
         }

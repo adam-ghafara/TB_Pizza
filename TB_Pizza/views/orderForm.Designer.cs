@@ -53,6 +53,7 @@
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvPizza)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -122,6 +122,7 @@
             this.dtvPizza.Name = "dtvPizza";
             this.dtvPizza.Size = new System.Drawing.Size(653, 112);
             this.dtvPizza.TabIndex = 0;
+            this.dtvPizza.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvPizza_CellContentClick);
             // 
             // groupBox2
             // 
@@ -344,6 +345,15 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Detail Pemesanan";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(14, 76);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Take Order";
+            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -406,6 +416,7 @@
             this.btMakeOrder.TabIndex = 3;
             this.btMakeOrder.Text = "Buat Pesanan";
             this.btMakeOrder.UseVisualStyleBackColor = true;
+            this.btMakeOrder.Click += new System.EventHandler(this.btMakeOrder_Click);
             // 
             // button2
             // 
@@ -452,15 +463,6 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 76);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Take Order";
-            // 
             // orderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,6 +480,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "orderForm";
             this.Text = "Pesanan";
+            this.Load += new System.EventHandler(this.orderForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvPizza)).EndInit();
