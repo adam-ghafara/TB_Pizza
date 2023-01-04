@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.checkBox18 = new System.Windows.Forms.CheckBox();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.dtvPizza = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -62,13 +64,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvPizza)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -80,14 +82,34 @@
             this.groupBox1.Controls.Add(this.dtvPizza);
             this.groupBox1.Location = new System.Drawing.Point(12, 113);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(677, 135);
+            this.groupBox1.Size = new System.Drawing.Size(788, 135);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Silahkan Pilih Pizza";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(690, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 73);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "?";
+            // 
+            // checkBox18
+            // 
+            this.checkBox18.AutoSize = true;
+            this.checkBox18.Location = new System.Drawing.Point(681, 106);
+            this.checkBox18.Name = "checkBox18";
+            this.checkBox18.Size = new System.Drawing.Size(89, 17);
+            this.checkBox18.TabIndex = 2;
+            this.checkBox18.Text = "Custom Pizza";
+            this.checkBox18.UseVisualStyleBackColor = true;
+            // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(531, 17);
+            this.vScrollBar1.Location = new System.Drawing.Point(662, 17);
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(13, 112);
             this.vScrollBar1.TabIndex = 1;
@@ -97,7 +119,7 @@
             this.dtvPizza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtvPizza.Location = new System.Drawing.Point(6, 17);
             this.dtvPizza.Name = "dtvPizza";
-            this.dtvPizza.Size = new System.Drawing.Size(522, 112);
+            this.dtvPizza.Size = new System.Drawing.Size(653, 112);
             this.dtvPizza.TabIndex = 0;
             // 
             // groupBox2
@@ -111,9 +133,9 @@
             this.groupBox2.Controls.Add(this.checkBox3);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 254);
+            this.groupBox2.Location = new System.Drawing.Point(10, 254);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(342, 135);
+            this.groupBox2.Size = new System.Drawing.Size(411, 135);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Custom Pizza (Silahkan Pilih Topping)";
@@ -220,7 +242,7 @@
             this.groupBox3.Controls.Add(this.checkBox7);
             this.groupBox3.Location = new System.Drawing.Point(12, 395);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(342, 135);
+            this.groupBox3.Size = new System.Drawing.Size(409, 135);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Beverage dan Lainnya";
@@ -313,9 +335,9 @@
             this.groupBox4.Controls.Add(this.textBox3);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Location = new System.Drawing.Point(360, 254);
+            this.groupBox4.Location = new System.Drawing.Point(427, 254);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(329, 157);
+            this.groupBox4.Size = new System.Drawing.Size(377, 157);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Detail Pemesanan";
@@ -376,7 +398,7 @@
             // 
             // btMakeOrder
             // 
-            this.btMakeOrder.Location = new System.Drawing.Point(464, 507);
+            this.btMakeOrder.Location = new System.Drawing.Point(531, 507);
             this.btMakeOrder.Name = "btMakeOrder";
             this.btMakeOrder.Size = new System.Drawing.Size(92, 23);
             this.btMakeOrder.TabIndex = 3;
@@ -385,7 +407,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(562, 507);
+            this.button2.Location = new System.Drawing.Point(629, 507);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 23);
             this.button2.TabIndex = 4;
@@ -397,7 +419,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(471, 414);
+            this.label1.Location = new System.Drawing.Point(569, 422);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 18);
             this.label1.TabIndex = 5;
@@ -405,7 +427,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(444, 455);
+            this.textBox1.Location = new System.Drawing.Point(542, 463);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(240, 20);
             this.textBox1.TabIndex = 6;
@@ -414,37 +436,26 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(391, 454);
+            this.label4.Location = new System.Drawing.Point(489, 462);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 18);
             this.label4.TabIndex = 7;
             this.label4.Text = "Rp.";
             // 
-            // checkBox18
+            // pictureBox1
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(565, 108);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(89, 17);
-            this.checkBox18.TabIndex = 2;
-            this.checkBox18.Text = "Custom Pizza";
-            this.checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(574, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 73);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "?";
+            this.pictureBox1.Location = new System.Drawing.Point(14, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(788, 103);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // orderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 540);
+            this.ClientSize = new System.Drawing.Size(816, 559);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -465,6 +476,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,5 +520,6 @@
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.CheckBox checkBox18;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
