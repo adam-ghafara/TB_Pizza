@@ -43,5 +43,88 @@ namespace TB_Pizza.views
             cbPizzaPromo.Text = dtvPizzaList.Rows[e.RowIndex].Cells[2].Value.ToString();
             tbPrice.Text = dtvPizzaList.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
+
+        private void btTambah_Click(object sender, EventArgs e)
+        {
+            if (tbPizzaName.Text == "" || cbPizzaPromo.SelectedIndex != -1 || tbPrice.Text == "")
+            {
+                MessageBox.Show("Data Harus Di isi!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                if ((tbPrice.Text).All(Char.IsNumber))
+                {
+                    m_pizza pizzaData = new m_pizza();
+                    pizzaData.P_name = tbPizzaName.Text;
+                    pizzaData.P_promo = cbPizzaPromo.Text;
+                    pizzaData.P_price = tbPrice.Text;
+
+                    GetPizza.Insert(pizzaData);
+
+                    tbPizzaName.Text = "";
+                    cbPizzaPromo.SelectedIndex = -1;
+                    tbPrice.Text = "";
+
+
+                    ShowConnect();
+                }
+                else
+                {
+                    MessageBox.Show("Harga hanya dimasukkan Angka Saja.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+            }
+
+        }
+
+        private void btUbah_Click(object sender, EventArgs e)
+        {
+            if (tbPizzaName.Text == "" || cbPizzaPromo.SelectedIndex != -1 || tbPrice.Text == "")
+            {
+                MessageBox.Show("Data Harus Di isi!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                if ((tbPrice.Text).All(Char.IsNumber))
+                {
+                    m_pizza pizzaData = new m_pizza();
+                    pizzaData.P_name = tbPizzaName.Text;
+                    pizzaData.P_promo = cbPizzaPromo.Text;
+                    pizzaData.P_price = tbPrice.Text;
+
+                    GetPizza.Update(pizzaData,p_id);
+
+                    tbPizzaName.Text = "";
+                    cbPizzaPromo.SelectedIndex = -1;
+                    tbPrice.Text = "";
+
+
+                    ShowConnect();
+                }
+                else
+                {
+                    MessageBox.Show("Harga hanya dimasukkan Angka Saja.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+            }
+
+        }
+
+        private void btHapus_Click(object sender, EventArgs e)
+        {
+            m_pizza pizzaData = new m_pizza();
+
+            GetPizza.Delete(pizzaData, p_id);
+
+            tbPizzaName.Text = "";
+            cbPizzaPromo.SelectedIndex = -1;
+            tbPrice.Text = "";
+
+
+            ShowConnect();
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

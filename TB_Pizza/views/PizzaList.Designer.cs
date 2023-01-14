@@ -56,6 +56,7 @@
             this.btTambah.TabIndex = 19;
             this.btTambah.Text = "Tambah";
             this.btTambah.UseVisualStyleBackColor = true;
+            this.btTambah.Click += new System.EventHandler(this.btTambah_Click);
             // 
             // btClose
             // 
@@ -65,6 +66,7 @@
             this.btClose.TabIndex = 18;
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // btHapus
             // 
@@ -74,6 +76,7 @@
             this.btHapus.TabIndex = 17;
             this.btHapus.Text = "Hapus";
             this.btHapus.UseVisualStyleBackColor = true;
+            this.btHapus.Click += new System.EventHandler(this.btHapus_Click);
             // 
             // btUbah
             // 
@@ -83,6 +86,7 @@
             this.btUbah.TabIndex = 16;
             this.btUbah.Text = "Ubah";
             this.btUbah.UseVisualStyleBackColor = true;
+            this.btUbah.Click += new System.EventHandler(this.btUbah_Click);
             // 
             // groupBox2
             // 
