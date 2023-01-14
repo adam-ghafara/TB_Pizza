@@ -59,8 +59,9 @@
             this.btOption.Name = "btOption";
             this.btOption.Size = new System.Drawing.Size(125, 37);
             this.btOption.TabIndex = 2;
-            this.btOption.Text = "Opsi";
+            this.btOption.Text = "Kembali Ke Menu Utama";
             this.btOption.UseVisualStyleBackColor = true;
+            this.btOption.Click += new System.EventHandler(this.btOption_Click);
             // 
             // button4
             // 

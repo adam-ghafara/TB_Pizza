@@ -86,9 +86,27 @@
   <ItemGroup>
     <Compile Include="controller\connection.cs" />
     <Compile Include="controller\logging.cs" />
+    <Compile Include="controller\miscfood.cs" />
     <Compile Include="controller\newOrder.cs" />
+    <Compile Include="controller\pizza.cs" />
+    <Compile Include="controller\support.cs" />
+    <Compile Include="model\m_pizza.cs" />
+    <Compile Include="model\m_support.cs" />
+    <Compile Include="views\FormSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FormSupport.Designer.cs">
+      <DependentUpon>FormSupport.cs</DependentUpon>
+    </Compile>
     <Compile Include="model\m_login.cs" />
+    <Compile Include="model\m_miscfood.cs" />
     <Compile Include="model\m_order.cs" />
+    <Compile Include="views\about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\about.Designer.cs">
+      <DependentUpon>about.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\adminOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,12 +145,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\MiscFoodList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\MiscFoodList.Designer.cs">
+      <DependentUpon>MiscFoodList.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\orderForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\orderForm.Designer.cs">
       <DependentUpon>orderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\PizzaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\PizzaList.Designer.cs">
+      <DependentUpon>PizzaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\supportBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\supportBox.Designer.cs">
+      <DependentUpon>supportBox.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="views\FormSupport.resx">
+      <DependentUpon>FormSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\about.resx">
+      <DependentUpon>about.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\adminOrder.resx">
       <DependentUpon>adminOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,8 +202,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\MiscFoodList.resx">
+      <DependentUpon>MiscFoodList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\orderForm.resx">
       <DependentUpon>orderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\PizzaList.resx">
+      <DependentUpon>PizzaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\supportBox.resx">
+      <DependentUpon>supportBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -177,6 +228,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="assets\images\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

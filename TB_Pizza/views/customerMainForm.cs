@@ -49,5 +49,15 @@ namespace TB_Pizza.views
             adminForm.Show();
             this.Hide();
         }
+
+        private void customerMainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.OemQuotes && e.Modifiers == Keys.Control)
+            {
+                Form options = new extraOptions();
+                options.Show();
+                this.Hide();
+            }
+        }
     }
 }

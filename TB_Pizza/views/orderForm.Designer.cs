@@ -28,48 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(orderForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.dtvPizza = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbCustomPizza = new System.Windows.Forms.CheckBox();
+            this.gbCustom = new System.Windows.Forms.GroupBox();
+            this.cbPineappel = new System.Windows.Forms.CheckBox();
+            this.cbTuna = new System.Windows.Forms.CheckBox();
+            this.cbOnion = new System.Windows.Forms.CheckBox();
+            this.cbPizzaSos = new System.Windows.Forms.CheckBox();
+            this.cbSausage = new System.Windows.Forms.CheckBox();
+            this.cbCheddar = new System.Windows.Forms.CheckBox();
+            this.cbMozarella = new System.Windows.Forms.CheckBox();
+            this.cbOlive = new System.Windows.Forms.CheckBox();
+            this.cbPepperoni = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.dtvMiscfood = new System.Windows.Forms.DataGridView();
+            this.checkFood = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbTakeaway = new System.Windows.Forms.RadioButton();
+            this.rbDine = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbTable = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.btMakeOrder = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbTotal = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtvPizza)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.gbCustom.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvMiscfood)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,9 +72,7 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.checkBox18);
-            this.groupBox1.Controls.Add(this.vScrollBar1);
-            this.groupBox1.Controls.Add(this.dtvPizza);
+            this.groupBox1.Controls.Add(this.cbCustomPizza);
             this.groupBox1.Location = new System.Drawing.Point(12, 113);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(788, 135);
@@ -98,246 +90,170 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "?";
             // 
-            // checkBox18
+            // cbCustomPizza
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(681, 106);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(89, 17);
-            this.checkBox18.TabIndex = 2;
-            this.checkBox18.Text = "Custom Pizza";
-            this.checkBox18.UseVisualStyleBackColor = true;
+            this.cbCustomPizza.AutoSize = true;
+            this.cbCustomPizza.Location = new System.Drawing.Point(681, 106);
+            this.cbCustomPizza.Name = "cbCustomPizza";
+            this.cbCustomPizza.Size = new System.Drawing.Size(89, 17);
+            this.cbCustomPizza.TabIndex = 2;
+            this.cbCustomPizza.Text = "Custom Pizza";
+            this.cbCustomPizza.UseVisualStyleBackColor = true;
+            this.cbCustomPizza.CheckedChanged += new System.EventHandler(this.cbCustomPizza_CheckedChanged);
             // 
-            // vScrollBar1
+            // gbCustom
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(662, 17);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(13, 112);
-            this.vScrollBar1.TabIndex = 1;
+            this.gbCustom.Controls.Add(this.cbPineappel);
+            this.gbCustom.Controls.Add(this.cbTuna);
+            this.gbCustom.Controls.Add(this.cbOnion);
+            this.gbCustom.Controls.Add(this.cbPizzaSos);
+            this.gbCustom.Controls.Add(this.cbSausage);
+            this.gbCustom.Controls.Add(this.cbCheddar);
+            this.gbCustom.Controls.Add(this.cbMozarella);
+            this.gbCustom.Controls.Add(this.cbOlive);
+            this.gbCustom.Controls.Add(this.cbPepperoni);
+            this.gbCustom.Enabled = false;
+            this.gbCustom.Location = new System.Drawing.Point(10, 254);
+            this.gbCustom.Name = "gbCustom";
+            this.gbCustom.Size = new System.Drawing.Size(411, 135);
+            this.gbCustom.TabIndex = 1;
+            this.gbCustom.TabStop = false;
+            this.gbCustom.Text = "Custom Pizza (Silahkan Pilih Topping)";
             // 
-            // dtvPizza
+            // cbPineappel
             // 
-            this.dtvPizza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvPizza.Location = new System.Drawing.Point(6, 17);
-            this.dtvPizza.Name = "dtvPizza";
-            this.dtvPizza.Size = new System.Drawing.Size(653, 112);
-            this.dtvPizza.TabIndex = 0;
-            this.dtvPizza.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvPizza_CellContentClick);
+            this.cbPineappel.AutoSize = true;
+            this.cbPineappel.Location = new System.Drawing.Point(225, 103);
+            this.cbPineappel.Name = "cbPineappel";
+            this.cbPineappel.Size = new System.Drawing.Size(57, 17);
+            this.cbPineappel.TabIndex = 8;
+            this.cbPineappel.Text = "Nanas";
+            this.cbPineappel.UseVisualStyleBackColor = true;
+            this.cbPineappel.CheckedChanged += new System.EventHandler(this.cbPineappel_CheckedChanged);
             // 
-            // groupBox2
+            // cbTuna
             // 
-            this.groupBox2.Controls.Add(this.checkBox15);
-            this.groupBox2.Controls.Add(this.checkBox16);
-            this.groupBox2.Controls.Add(this.checkBox17);
-            this.groupBox2.Controls.Add(this.checkBox6);
-            this.groupBox2.Controls.Add(this.checkBox5);
-            this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(10, 254);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(411, 135);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Custom Pizza (Silahkan Pilih Topping)";
+            this.cbTuna.AutoSize = true;
+            this.cbTuna.Location = new System.Drawing.Point(225, 61);
+            this.cbTuna.Name = "cbTuna";
+            this.cbTuna.Size = new System.Drawing.Size(75, 17);
+            this.cbTuna.TabIndex = 7;
+            this.cbTuna.Text = "Ikan Tuna";
+            this.cbTuna.UseVisualStyleBackColor = true;
+            this.cbTuna.CheckedChanged += new System.EventHandler(this.cbTuna_CheckedChanged);
             // 
-            // checkBox15
+            // cbOnion
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(225, 103);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(57, 17);
-            this.checkBox15.TabIndex = 8;
-            this.checkBox15.Text = "Nanas";
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.cbOnion.AutoSize = true;
+            this.cbOnion.Location = new System.Drawing.Point(225, 19);
+            this.cbOnion.Name = "cbOnion";
+            this.cbOnion.Size = new System.Drawing.Size(106, 17);
+            this.cbOnion.TabIndex = 6;
+            this.cbOnion.Text = "Bawang Bombay";
+            this.cbOnion.UseVisualStyleBackColor = true;
+            this.cbOnion.CheckedChanged += new System.EventHandler(this.cbOnion_CheckedChanged);
             // 
-            // checkBox16
+            // cbPizzaSos
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(225, 61);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(75, 17);
-            this.checkBox16.TabIndex = 7;
-            this.checkBox16.Text = "Ikan Tuna";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.cbPizzaSos.AutoSize = true;
+            this.cbPizzaSos.Location = new System.Drawing.Point(129, 106);
+            this.cbPizzaSos.Name = "cbPizzaSos";
+            this.cbPizzaSos.Size = new System.Drawing.Size(78, 17);
+            this.cbPizzaSos.TabIndex = 5;
+            this.cbPizzaSos.Text = "Saos Pizza";
+            this.cbPizzaSos.UseVisualStyleBackColor = true;
+            this.cbPizzaSos.CheckedChanged += new System.EventHandler(this.cbPizzaSos_CheckedChanged);
             // 
-            // checkBox17
+            // cbSausage
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(225, 19);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(106, 17);
-            this.checkBox17.TabIndex = 6;
-            this.checkBox17.Text = "Bawang Bombay";
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.cbSausage.AutoSize = true;
+            this.cbSausage.Location = new System.Drawing.Point(129, 64);
+            this.cbSausage.Name = "cbSausage";
+            this.cbSausage.Size = new System.Drawing.Size(82, 17);
+            this.cbSausage.TabIndex = 4;
+            this.cbSausage.Text = "Sosis Bakar";
+            this.cbSausage.UseVisualStyleBackColor = true;
+            this.cbSausage.CheckedChanged += new System.EventHandler(this.cbSausage_CheckedChanged);
             // 
-            // checkBox6
+            // cbCheddar
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(129, 106);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(78, 17);
-            this.checkBox6.TabIndex = 5;
-            this.checkBox6.Text = "Saos Pizza";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.cbCheddar.AutoSize = true;
+            this.cbCheddar.Location = new System.Drawing.Point(129, 22);
+            this.cbCheddar.Name = "cbCheddar";
+            this.cbCheddar.Size = new System.Drawing.Size(90, 17);
+            this.cbCheddar.TabIndex = 3;
+            this.cbCheddar.Text = "Keju Cheddar";
+            this.cbCheddar.UseVisualStyleBackColor = true;
+            this.cbCheddar.CheckedChanged += new System.EventHandler(this.cbCheddar_CheckedChanged);
             // 
-            // checkBox5
+            // cbMozarella
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(129, 64);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(82, 17);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "Sosis Bakar";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.cbMozarella.AutoSize = true;
+            this.cbMozarella.Location = new System.Drawing.Point(28, 106);
+            this.cbMozarella.Name = "cbMozarella";
+            this.cbMozarella.Size = new System.Drawing.Size(95, 17);
+            this.cbMozarella.TabIndex = 2;
+            this.cbMozarella.Text = "Keju Mozarella";
+            this.cbMozarella.UseVisualStyleBackColor = true;
+            this.cbMozarella.CheckedChanged += new System.EventHandler(this.cbMozarella_CheckedChanged);
             // 
-            // checkBox4
+            // cbOlive
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(129, 22);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(90, 17);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Keju Cheddar";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cbOlive.AutoSize = true;
+            this.cbOlive.Location = new System.Drawing.Point(28, 64);
+            this.cbOlive.Name = "cbOlive";
+            this.cbOlive.Size = new System.Drawing.Size(84, 17);
+            this.cbOlive.TabIndex = 1;
+            this.cbOlive.Text = "Buah Zaitun";
+            this.cbOlive.UseVisualStyleBackColor = true;
+            this.cbOlive.CheckedChanged += new System.EventHandler(this.cbOlive_CheckedChanged);
             // 
-            // checkBox3
+            // cbPepperoni
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(28, 106);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(95, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Keju Mozarella";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(28, 64);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(84, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Buah Zaitun";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(28, 22);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(74, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Pepperoni";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbPepperoni.AutoSize = true;
+            this.cbPepperoni.Location = new System.Drawing.Point(28, 22);
+            this.cbPepperoni.Name = "cbPepperoni";
+            this.cbPepperoni.Size = new System.Drawing.Size(74, 17);
+            this.cbPepperoni.TabIndex = 0;
+            this.cbPepperoni.Text = "Pepperoni";
+            this.cbPepperoni.UseVisualStyleBackColor = true;
+            this.cbPepperoni.CheckedChanged += new System.EventHandler(this.cbPepperoni_CheckedChanged);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.checkBox11);
-            this.groupBox3.Controls.Add(this.checkBox12);
-            this.groupBox3.Controls.Add(this.checkBox13);
-            this.groupBox3.Controls.Add(this.checkBox14);
-            this.groupBox3.Controls.Add(this.checkBox10);
-            this.groupBox3.Controls.Add(this.checkBox9);
-            this.groupBox3.Controls.Add(this.checkBox8);
-            this.groupBox3.Controls.Add(this.checkBox7);
+            this.groupBox3.Controls.Add(this.dtvMiscfood);
             this.groupBox3.Location = new System.Drawing.Point(12, 395);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(409, 135);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Beverage dan Lainnya";
+            this.groupBox3.Text = "Makanan Lainnya";
             // 
-            // checkBox11
+            // dtvMiscfood
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(223, 71);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(78, 17);
-            this.checkBox11.TabIndex = 7;
-            this.checkBox11.Text = "Kue Coklat";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.dtvMiscfood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvMiscfood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.checkFood});
+            this.dtvMiscfood.Location = new System.Drawing.Point(6, 17);
+            this.dtvMiscfood.Name = "dtvMiscfood";
+            this.dtvMiscfood.Size = new System.Drawing.Size(397, 112);
+            this.dtvMiscfood.TabIndex = 4;
+            this.dtvMiscfood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMiscfood_CellContentClick);
             // 
-            // checkBox12
+            // checkFood
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(223, 35);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(63, 17);
-            this.checkBox12.TabIndex = 6;
-            this.checkBox12.Text = "Dimsum";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(146, 71);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(45, 17);
-            this.checkBox13.TabIndex = 5;
-            this.checkBox13.Text = "Roti";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(146, 35);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(71, 17);
-            this.checkBox14.TabIndex = 4;
-            this.checkBox14.Text = "Sphagetti";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(70, 71);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(50, 17);
-            this.checkBox10.TabIndex = 3;
-            this.checkBox10.Text = "Susu";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(70, 35);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(42, 17);
-            this.checkBox9.TabIndex = 2;
-            this.checkBox9.Text = "Jus";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(13, 71);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(47, 17);
-            this.checkBox8.TabIndex = 1;
-            this.checkBox8.Text = "Kopi";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(13, 35);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(51, 17);
-            this.checkBox7.TabIndex = 0;
-            this.checkBox7.Text = "Soda";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkFood.HeaderText = "Pilih";
+            this.checkFood.Name = "checkFood";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.radioButton2);
-            this.groupBox4.Controls.Add(this.radioButton1);
+            this.groupBox4.Controls.Add(this.rbTakeaway);
+            this.groupBox4.Controls.Add(this.rbDine);
             this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.tbTable);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.tbName);
             this.groupBox4.Location = new System.Drawing.Point(427, 254);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(377, 157);
@@ -354,27 +270,29 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Take Order";
             // 
-            // radioButton2
+            // rbTakeaway
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(202, 72);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(79, 17);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Take Away";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbTakeaway.AutoSize = true;
+            this.rbTakeaway.Location = new System.Drawing.Point(202, 72);
+            this.rbTakeaway.Name = "rbTakeaway";
+            this.rbTakeaway.Size = new System.Drawing.Size(79, 17);
+            this.rbTakeaway.TabIndex = 5;
+            this.rbTakeaway.TabStop = true;
+            this.rbTakeaway.Text = "Take Away";
+            this.rbTakeaway.UseVisualStyleBackColor = true;
+            this.rbTakeaway.CheckedChanged += new System.EventHandler(this.rbTakeaway_CheckedChanged);
             // 
-            // radioButton1
+            // rbDine
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(115, 72);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(59, 17);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Dine In";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbDine.AutoSize = true;
+            this.rbDine.Location = new System.Drawing.Point(115, 72);
+            this.rbDine.Name = "rbDine";
+            this.rbDine.Size = new System.Drawing.Size(59, 17);
+            this.rbDine.TabIndex = 4;
+            this.rbDine.TabStop = true;
+            this.rbDine.Text = "Dine In";
+            this.rbDine.UseVisualStyleBackColor = true;
+            this.rbDine.CheckedChanged += new System.EventHandler(this.rbDine_CheckedChanged);
             // 
             // label3
             // 
@@ -385,12 +303,12 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Nomor Meja";
             // 
-            // textBox3
+            // tbTable
             // 
-            this.textBox3.Location = new System.Drawing.Point(84, 115);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(239, 20);
-            this.textBox3.TabIndex = 2;
+            this.tbTable.Location = new System.Drawing.Point(84, 115);
+            this.tbTable.Name = "tbTable";
+            this.tbTable.Size = new System.Drawing.Size(239, 20);
+            this.tbTable.TabIndex = 2;
             // 
             // label2
             // 
@@ -401,12 +319,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nama";
             // 
-            // textBox2
+            // tbName
             // 
-            this.textBox2.Location = new System.Drawing.Point(84, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(239, 20);
-            this.textBox2.TabIndex = 0;
+            this.tbName.Location = new System.Drawing.Point(84, 30);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(239, 20);
+            this.tbName.TabIndex = 0;
             // 
             // btMakeOrder
             // 
@@ -438,12 +356,12 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Total Harga";
             // 
-            // textBox1
+            // tbTotal
             // 
-            this.textBox1.Location = new System.Drawing.Point(542, 463);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 20);
-            this.textBox1.TabIndex = 6;
+            this.tbTotal.Location = new System.Drawing.Point(542, 463);
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.Size = new System.Drawing.Size(240, 20);
+            this.tbTotal.TabIndex = 6;
             // 
             // label4
             // 
@@ -457,37 +375,50 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(14, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(788, 103);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Orange;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(348, 80);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 20);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Buat Pesanan";
+            // 
             // orderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.OrangeRed;
             this.ClientSize = new System.Drawing.Size(816, 559);
+            this.ControlBox = false;
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbTotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btMakeOrder);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbCustom);
             this.Controls.Add(this.groupBox1);
             this.Name = "orderForm";
-            this.Text = "Pesanan";
             this.Load += new System.EventHandler(this.orderForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtvPizza)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbCustom.ResumeLayout(false);
+            this.gbCustom.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvMiscfood)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -499,42 +430,35 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbCustom;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btMakeOrder;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbTotal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbTable;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.RadioButton rbTakeaway;
+        private System.Windows.Forms.RadioButton rbDine;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dtvPizza;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.CheckBox checkBox18;
+        private System.Windows.Forms.CheckBox cbPepperoni;
+        private System.Windows.Forms.CheckBox cbPizzaSos;
+        private System.Windows.Forms.CheckBox cbSausage;
+        private System.Windows.Forms.CheckBox cbCheddar;
+        private System.Windows.Forms.CheckBox cbMozarella;
+        private System.Windows.Forms.CheckBox cbOlive;
+        private System.Windows.Forms.CheckBox cbPineappel;
+        private System.Windows.Forms.CheckBox cbTuna;
+        private System.Windows.Forms.CheckBox cbOnion;
+        private System.Windows.Forms.CheckBox cbCustomPizza;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dtvMiscfood;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkFood;
     }
 }

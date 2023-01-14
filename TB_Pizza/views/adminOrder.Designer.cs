@@ -33,20 +33,23 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbTable = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.rtbMisc = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbPizza = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbOrderstatus = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btUbah = new System.Windows.Forms.Button();
+            this.btHapus = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
+            this.tbTotal = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtvOrder)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -90,30 +93,33 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.tbTotal);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.tbTable);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.richTextBox2);
+            this.groupBox2.Controls.Add(this.rtbMisc);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.richTextBox1);
+            this.groupBox2.Controls.Add(this.rtbPizza);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.tbOrderstatus);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.tbName);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(475, 90);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(313, 355);
+            this.groupBox2.Size = new System.Drawing.Size(313, 383);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detail Pesanan";
             // 
-            // textBox4
+            // tbTable
             // 
-            this.textBox4.Location = new System.Drawing.Point(90, 116);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(210, 20);
-            this.textBox4.TabIndex = 13;
+            this.tbTable.Location = new System.Drawing.Point(90, 116);
+            this.tbTable.Name = "tbTable";
+            this.tbTable.Size = new System.Drawing.Size(210, 20);
+            this.tbTable.TabIndex = 13;
             // 
             // label7
             // 
@@ -124,30 +130,30 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "No Meja";
             // 
-            // richTextBox2
+            // rtbMisc
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(26, 264);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(274, 75);
-            this.richTextBox2.TabIndex = 11;
-            this.richTextBox2.Text = "";
+            this.rtbMisc.Location = new System.Drawing.Point(26, 249);
+            this.rtbMisc.Name = "rtbMisc";
+            this.rtbMisc.Size = new System.Drawing.Size(274, 75);
+            this.rtbMisc.TabIndex = 11;
+            this.rtbMisc.Text = "";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 248);
+            this.label6.Location = new System.Drawing.Point(23, 233);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 13);
+            this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Beverage dan Lainnya";
+            this.label6.Text = "Pesanan Lainnya";
             // 
-            // richTextBox1
+            // rtbPizza
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(26, 188);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(274, 57);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = "";
+            this.rtbPizza.Location = new System.Drawing.Point(26, 188);
+            this.rtbPizza.Name = "rtbPizza";
+            this.rtbPizza.Size = new System.Drawing.Size(274, 42);
+            this.rtbPizza.TabIndex = 9;
+            this.rtbPizza.Text = "";
             // 
             // label5
             // 
@@ -168,12 +174,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Pilihan Pizza";
             // 
-            // textBox3
+            // tbOrderstatus
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 20);
-            this.textBox3.TabIndex = 5;
+            this.tbOrderstatus.Location = new System.Drawing.Point(90, 77);
+            this.tbOrderstatus.Name = "tbOrderstatus";
+            this.tbOrderstatus.Size = new System.Drawing.Size(210, 20);
+            this.tbOrderstatus.TabIndex = 5;
             // 
             // label3
             // 
@@ -184,12 +190,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Take Order";
             // 
-            // textBox2
+            // tbName
             // 
-            this.textBox2.Location = new System.Drawing.Point(70, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 20);
-            this.textBox2.TabIndex = 3;
+            this.tbName.Location = new System.Drawing.Point(70, 38);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(230, 20);
+            this.tbName.TabIndex = 3;
             // 
             // label2
             // 
@@ -200,41 +206,68 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nama";
             // 
-            // button1
+            // btUbah
             // 
-            this.button1.Location = new System.Drawing.Point(613, 451);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Ubah";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btUbah.Location = new System.Drawing.Point(613, 479);
+            this.btUbah.Name = "btUbah";
+            this.btUbah.Size = new System.Drawing.Size(75, 23);
+            this.btUbah.TabIndex = 3;
+            this.btUbah.Text = "Ubah";
+            this.btUbah.UseVisualStyleBackColor = true;
+            this.btUbah.Click += new System.EventHandler(this.btUbah_Click);
             // 
-            // button2
+            // btHapus
             // 
-            this.button2.Location = new System.Drawing.Point(700, 451);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Hapus";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btHapus.Location = new System.Drawing.Point(700, 479);
+            this.btHapus.Name = "btHapus";
+            this.btHapus.Size = new System.Drawing.Size(75, 23);
+            this.btHapus.TabIndex = 4;
+            this.btHapus.Text = "Hapus";
+            this.btHapus.UseVisualStyleBackColor = true;
+            this.btHapus.Click += new System.EventHandler(this.btHapus_Click);
             // 
-            // button3
+            // btClose
             // 
-            this.button3.Location = new System.Drawing.Point(700, 517);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Close";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btClose.Location = new System.Drawing.Point(700, 517);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(75, 23);
+            this.btClose.TabIndex = 5;
+            this.btClose.Text = "Close";
+            this.btClose.UseVisualStyleBackColor = true;
+            // 
+            // tbTotal
+            // 
+            this.tbTotal.Location = new System.Drawing.Point(90, 357);
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.Size = new System.Drawing.Size(210, 20);
+            this.tbTotal.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(46, 364);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(24, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Rp.";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(87, 341);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Total";
             // 
             // adminOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 552);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btClose);
+            this.Controls.Add(this.btHapus);
+            this.Controls.Add(this.btUbah);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtvOrder);
@@ -257,19 +290,22 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbOrderstatus;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.RichTextBox rtbPizza;
+        private System.Windows.Forms.RichTextBox rtbMisc;
+        private System.Windows.Forms.Button btUbah;
+        private System.Windows.Forms.Button btHapus;
+        private System.Windows.Forms.Button btClose;
+        private System.Windows.Forms.TextBox tbTable;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbTotal;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

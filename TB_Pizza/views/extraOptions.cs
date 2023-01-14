@@ -26,7 +26,17 @@ namespace TB_Pizza.views
         private void btAdminForm_Click(object sender, EventArgs e)
         {
             AdminViews admins = new AdminViews();
+            Form Main = new customerMainForm();
             admins.Show();
+            Main.Hide();
+            this.Hide();
+        }
+
+        private void btOption_Click(object sender, EventArgs e)
+        {
+            Form Main = new customerMainForm();
+            this.Hide();
+            Main.Show();
         }
     }
 }
