@@ -102,8 +102,8 @@
             // masterToolStripMenuItem
             // 
             this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.daftarBeverageDanLainnyaToolStripMenuItem,
-            this.daftarPizzaToolStripMenuItem});
+            this.daftarPizzaToolStripMenuItem,
+            this.daftarBeverageDanLainnyaToolStripMenuItem});
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
             this.masterToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.masterToolStripMenuItem.Text = "&Master";
@@ -185,6 +185,7 @@
             this.daftarPizzaToolStripMenuItem.Name = "daftarPizzaToolStripMenuItem";
             this.daftarPizzaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.daftarPizzaToolStripMenuItem.Text = "Daftar Pizza";
+            this.daftarPizzaToolStripMenuItem.Click += new System.EventHandler(this.daftarPizzaToolStripMenuItem_Click);
             // 
             // AdminViews
             // 

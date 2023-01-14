@@ -60,5 +60,11 @@ namespace TB_Pizza.views
                 int RandomQuote = getQuote.Next(0, 4);
                 quotelabel.Text = quotes[RandomQuote];
         }
+
+        private void daftarPizzaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form pizzaList = new PizzaList();
+            pizzaList.Show();
+        }
     }
 }
