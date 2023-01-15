@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtvSupportBox = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbNama = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.rtbMasukkan = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbNama = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvSupportBox)).BeginInit();
@@ -44,7 +44,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(199, 60);
+            this.label1.Location = new System.Drawing.Point(211, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 23);
             this.label1.TabIndex = 0;
@@ -52,11 +52,13 @@
             // 
             // dtvSupportBox
             // 
+            this.dtvSupportBox.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtvSupportBox.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvSupportBox.Location = new System.Drawing.Point(13, 99);
+            this.dtvSupportBox.Location = new System.Drawing.Point(13, 50);
             this.dtvSupportBox.Name = "dtvSupportBox";
             this.dtvSupportBox.Size = new System.Drawing.Size(280, 339);
             this.dtvSupportBox.TabIndex = 1;
+            this.dtvSupportBox.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvSupportBox_CellContentClick);
             // 
             // groupBox1
             // 
@@ -64,28 +66,20 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.tbNama);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(299, 99);
+            this.groupBox1.Location = new System.Drawing.Point(299, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(248, 254);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detail Masukkan";
             // 
-            // label2
+            // rtbMasukkan
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nama";
-            // 
-            // tbNama
-            // 
-            this.tbNama.Location = new System.Drawing.Point(10, 58);
-            this.tbNama.Name = "tbNama";
-            this.tbNama.Size = new System.Drawing.Size(224, 20);
-            this.tbNama.TabIndex = 1;
+            this.rtbMasukkan.Location = new System.Drawing.Point(10, 141);
+            this.rtbMasukkan.Name = "rtbMasukkan";
+            this.rtbMasukkan.Size = new System.Drawing.Size(224, 96);
+            this.rtbMasukkan.TabIndex = 3;
+            this.rtbMasukkan.Text = "";
             // 
             // label3
             // 
@@ -96,17 +90,25 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Masukkan";
             // 
-            // rtbMasukkan
+            // tbNama
             // 
-            this.rtbMasukkan.Location = new System.Drawing.Point(10, 141);
-            this.rtbMasukkan.Name = "rtbMasukkan";
-            this.rtbMasukkan.Size = new System.Drawing.Size(224, 96);
-            this.rtbMasukkan.TabIndex = 3;
-            this.rtbMasukkan.Text = "";
+            this.tbNama.Location = new System.Drawing.Point(10, 58);
+            this.tbNama.Name = "tbNama";
+            this.tbNama.Size = new System.Drawing.Size(224, 20);
+            this.tbNama.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nama";
             // 
             // btnHapus
             // 
-            this.btnHapus.Location = new System.Drawing.Point(369, 412);
+            this.btnHapus.Location = new System.Drawing.Point(369, 363);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(75, 23);
             this.btnHapus.TabIndex = 3;
@@ -116,7 +118,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(472, 412);
+            this.btnClose.Location = new System.Drawing.Point(472, 363);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 4;
@@ -128,12 +130,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 450);
+            this.ClientSize = new System.Drawing.Size(559, 406);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtvSupportBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "supportBox";
             this.Text = "supportBox";
             this.Load += new System.EventHandler(this.supportBox_Load);

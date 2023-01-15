@@ -46,7 +46,7 @@ namespace TB_Pizza.views
 
         private void btTambah_Click(object sender, EventArgs e)
         {
-            if (tbFoodName.Text == "" || cbFoodType.SelectedIndex != -1 || tbPrice.Text == "")
+            if (tbFoodName.Text == "" || cbFoodType.SelectedIndex == -1 || tbPrice.Text == "")
             {
                 MessageBox.Show("Data Harus Di isi!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
@@ -78,7 +78,7 @@ namespace TB_Pizza.views
 
         private void btUbah_Click(object sender, EventArgs e)
         {
-            if (tbFoodName.Text == "" || cbFoodType.SelectedIndex != -1 || tbPrice.Text == "")
+            if (tbFoodName.Text == "" || cbFoodType.SelectedIndex == -1 || tbPrice.Text == "")
             {
                 MessageBox.Show("Data Harus Di isi!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
@@ -129,6 +129,11 @@ namespace TB_Pizza.views
             tbFoodName.Text = dtvFoodList.Rows[e.RowIndex].Cells[1].Value.ToString();
             cbFoodType.Text = dtvFoodList.Rows[e.RowIndex].Cells[2].Value.ToString();
             tbPrice.Text = dtvFoodList.Rows[e.RowIndex].Cells[3].Value.ToString();
+        }
+
+        private void tbFind_TextChanged(object sender, EventArgs e)
+        {
+            dtvFoodList.DataSource = connect.ShowData("SELECT * FROM go_miscfood WHERE food_name LIKE '%' '" + tbFind.Text + "' '%'");
         }
     }
 }

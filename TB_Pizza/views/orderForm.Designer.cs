@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(orderForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtvPizza = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.cbCustomPizza = new System.Windows.Forms.CheckBox();
             this.gbCustom = new System.Windows.Forms.GroupBox();
@@ -44,7 +46,6 @@
             this.cbPepperoni = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dtvMiscfood = new System.Windows.Forms.DataGridView();
-            this.checkFood = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.rbTakeaway = new System.Windows.Forms.RadioButton();
@@ -61,6 +62,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvPizza)).BeginInit();
             this.gbCustom.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvMiscfood)).BeginInit();
@@ -71,6 +73,8 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.dtvPizza);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cbCustomPizza);
             this.groupBox1.Location = new System.Drawing.Point(12, 113);
@@ -80,11 +84,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Silahkan Pilih Pizza";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(702, 112);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Rp. 25000";
+            // 
+            // dtvPizza
+            // 
+            this.dtvPizza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvPizza.Location = new System.Drawing.Point(6, 19);
+            this.dtvPizza.Name = "dtvPizza";
+            this.dtvPizza.Size = new System.Drawing.Size(669, 110);
+            this.dtvPizza.TabIndex = 4;
+            this.dtvPizza.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(690, 30);
+            this.label5.Location = new System.Drawing.Point(692, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 73);
             this.label5.TabIndex = 3;
@@ -93,7 +115,7 @@
             // cbCustomPizza
             // 
             this.cbCustomPizza.AutoSize = true;
-            this.cbCustomPizza.Location = new System.Drawing.Point(681, 106);
+            this.cbCustomPizza.Location = new System.Drawing.Point(681, 92);
             this.cbCustomPizza.Name = "cbCustomPizza";
             this.cbCustomPizza.Size = new System.Drawing.Size(89, 17);
             this.cbCustomPizza.TabIndex = 2;
@@ -232,18 +254,11 @@
             // dtvMiscfood
             // 
             this.dtvMiscfood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvMiscfood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.checkFood});
             this.dtvMiscfood.Location = new System.Drawing.Point(6, 17);
             this.dtvMiscfood.Name = "dtvMiscfood";
             this.dtvMiscfood.Size = new System.Drawing.Size(397, 112);
             this.dtvMiscfood.TabIndex = 4;
             this.dtvMiscfood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMiscfood_CellContentClick);
-            // 
-            // checkFood
-            // 
-            this.checkFood.HeaderText = "Pilih";
-            this.checkFood.Name = "checkFood";
             // 
             // groupBox4
             // 
@@ -411,10 +426,12 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.gbCustom);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "orderForm";
             this.Load += new System.EventHandler(this.orderForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvPizza)).EndInit();
             this.gbCustom.ResumeLayout(false);
             this.gbCustom.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -459,6 +476,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dtvMiscfood;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn checkFood;
+        private System.Windows.Forms.DataGridView dtvPizza;
+        private System.Windows.Forms.Label label8;
     }
 }

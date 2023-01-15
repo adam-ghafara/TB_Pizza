@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TB_Pizza.controller;
+using TB_Pizza.model;
 
 namespace TB_Pizza.views
 {
     public partial class supportBox : Form
     {
         connection connect = new connection();
+        support doSupport = new support();
+
+        string support_id;
         public supportBox()
         {
             InitializeComponent();
@@ -38,12 +42,23 @@ namespace TB_Pizza.views
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
+            m_support delSupport = new m_support();
 
+            doSupport.Delete(delSupport, support_id);
+
+            ShowConnect();
         }
 
         private void supportBox_Load(object sender, EventArgs e)
         {
             ShowConnect();
+        }
+
+        private void dtvSupportBox_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            support_id = dtvSupportBox.Rows[e.RowIndex].Cells[0].Value.ToString();
+            tbNama.Text = dtvSupportBox.Rows[e.RowIndex].Cells[1].Value.ToString();
+            rtbMasukkan.Text = dtvSupportBox.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
     }
 }

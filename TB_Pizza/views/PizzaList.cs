@@ -35,6 +35,10 @@ namespace TB_Pizza.views
             dtvPizzaList.Columns[3].HeaderText = "Harga";
 
         }
+        private void PizzaList_Load(object sender, EventArgs e)
+        {
+            ShowConnect();
+        }
 
         private void dtvPizzaList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -46,7 +50,7 @@ namespace TB_Pizza.views
 
         private void btTambah_Click(object sender, EventArgs e)
         {
-            if (tbPizzaName.Text == "" || cbPizzaPromo.SelectedIndex != -1 || tbPrice.Text == "")
+            if (tbPizzaName.Text == "" || cbPizzaPromo.SelectedIndex == -1 || tbPrice.Text == "")
             {
                 MessageBox.Show("Data Harus Di isi!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
@@ -78,7 +82,7 @@ namespace TB_Pizza.views
 
         private void btUbah_Click(object sender, EventArgs e)
         {
-            if (tbPizzaName.Text == "" || cbPizzaPromo.SelectedIndex != -1 || tbPrice.Text == "")
+            if (tbPizzaName.Text == "" || cbPizzaPromo.SelectedIndex == -1 || tbPrice.Text == "")
             {
                 MessageBox.Show("Data Harus Di isi!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
@@ -126,5 +130,12 @@ namespace TB_Pizza.views
         {
             this.Hide();
         }
+
+        private void tbFind_TextChanged(object sender, EventArgs e)
+        {
+            dtvPizzaList.DataSource = connect.ShowData("SELECT * FROM go_pizza WHERE p_nama_pizza LIKE '%' '" + tbFind.Text + "' '%' OR p_promo '%' '" + tbFind.Text + "' '%"); ;
+        }
+
+
     }
 }

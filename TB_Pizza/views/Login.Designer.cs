@@ -35,7 +35,6 @@
             this.tbPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
-            this.cbShowpass = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +86,7 @@
             // btLogin
             // 
             this.btLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogin.Location = new System.Drawing.Point(152, 386);
+            this.btLogin.Location = new System.Drawing.Point(152, 353);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(113, 44);
             this.btLogin.TabIndex = 5;
@@ -95,23 +94,11 @@
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
-            // cbShowpass
-            // 
-            this.cbShowpass.AutoSize = true;
-            this.cbShowpass.Location = new System.Drawing.Point(142, 349);
-            this.cbShowpass.Name = "cbShowpass";
-            this.cbShowpass.Size = new System.Drawing.Size(124, 17);
-            this.cbShowpass.TabIndex = 6;
-            this.cbShowpass.Text = "Tampilkan Password";
-            this.cbShowpass.UseVisualStyleBackColor = true;
-            this.cbShowpass.CheckedChanged += new System.EventHandler(this.cbShowpass_CheckedChanged);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 468);
-            this.Controls.Add(this.cbShowpass);
+            this.ClientSize = new System.Drawing.Size(417, 421);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.label2);
@@ -139,7 +126,6 @@
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btLogin;
-        private System.Windows.Forms.CheckBox cbShowpass;
     }
 }
 

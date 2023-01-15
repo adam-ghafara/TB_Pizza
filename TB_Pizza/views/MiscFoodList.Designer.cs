@@ -163,6 +163,7 @@
             this.tbFind.Name = "tbFind";
             this.tbFind.Size = new System.Drawing.Size(230, 20);
             this.tbFind.TabIndex = 1;
+            this.tbFind.TextChanged += new System.EventHandler(this.tbFind_TextChanged);
             // 
             // label1
             // 
@@ -198,6 +199,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 373);
+            this.ControlBox = false;
             this.Controls.Add(this.btTambah);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.btHapus);
@@ -205,8 +207,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtvFoodList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MiscFoodList";
-            this.Text = "Master Makanan Lain";
+            this.Text = "Menu Lain";
             this.Load += new System.EventHandler(this.MiscFoodList_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

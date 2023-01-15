@@ -36,6 +36,7 @@
             this.pesananToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.daftarPesananToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.daftarPizzaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.daftarBeverageDanLainnyaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supportBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.quotelabel = new System.Windows.Forms.Label();
             this.btQuote = new System.Windows.Forms.Button();
-            this.daftarPizzaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +76,7 @@
             this.ReturnToolStripMenuItem.Name = "ReturnToolStripMenuItem";
             this.ReturnToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
             this.ReturnToolStripMenuItem.Text = "&Kembali ke Tampilan Utama";
+            this.ReturnToolStripMenuItem.Click += new System.EventHandler(this.ReturnToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -108,6 +109,13 @@
             this.masterToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.masterToolStripMenuItem.Text = "&Master";
             // 
+            // daftarPizzaToolStripMenuItem
+            // 
+            this.daftarPizzaToolStripMenuItem.Name = "daftarPizzaToolStripMenuItem";
+            this.daftarPizzaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.daftarPizzaToolStripMenuItem.Text = "Daftar Pizza";
+            this.daftarPizzaToolStripMenuItem.Click += new System.EventHandler(this.daftarPizzaToolStripMenuItem_Click);
+            // 
             // daftarBeverageDanLainnyaToolStripMenuItem
             // 
             this.daftarBeverageDanLainnyaToolStripMenuItem.Name = "daftarBeverageDanLainnyaToolStripMenuItem";
@@ -127,14 +135,14 @@
             // supportBoxToolStripMenuItem
             // 
             this.supportBoxToolStripMenuItem.Name = "supportBoxToolStripMenuItem";
-            this.supportBoxToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.supportBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.supportBoxToolStripMenuItem.Text = "&Support Box";
             this.supportBoxToolStripMenuItem.Click += new System.EventHandler(this.supportBoxToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -180,13 +188,6 @@
             this.btQuote.UseVisualStyleBackColor = true;
             this.btQuote.Click += new System.EventHandler(this.btQuote_Click);
             // 
-            // daftarPizzaToolStripMenuItem
-            // 
-            this.daftarPizzaToolStripMenuItem.Name = "daftarPizzaToolStripMenuItem";
-            this.daftarPizzaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.daftarPizzaToolStripMenuItem.Text = "Daftar Pizza";
-            this.daftarPizzaToolStripMenuItem.Click += new System.EventHandler(this.daftarPizzaToolStripMenuItem_Click);
-            // 
             // AdminViews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,6 +200,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminViews";
             this.Text = "Admins";

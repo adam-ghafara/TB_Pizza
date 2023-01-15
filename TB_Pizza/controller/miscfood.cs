@@ -19,8 +19,7 @@ namespace TB_Pizza.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("INSERT INTO go_miscfood (food_name, food_type, food_price) VALUES ('"
-                    + AddFood.Nama_makanan + "','" + AddFood.Jenis_makanan + "," + AddFood.Harga + "')");
+                koneksi.ExecuteQuery("INSERT INTO go_miscfood (food_name, food_type, food_price) VALUES ('" + AddFood.Nama_makanan + "','" + AddFood.Jenis_makanan + "','" + AddFood.Harga + "')");
                 status = true;
                 MessageBox.Show("Makanan Telah dimasukkan!", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -40,8 +39,7 @@ namespace TB_Pizza.controller
             {
                 koneksi.OpenConnection();
                 koneksi.ExecuteQuery("UPDATE go_miscfood SET food_name='"
-                    + updateFood.Nama_makanan + "'," + "food_type='" + updateFood.Jenis_makanan + "'," + "food_price='" + updateFood.Harga + "',"
-                    + "' WHERE food_id='" + food_id + "'");
+                    + updateFood.Nama_makanan + "'," + "food_type='" + updateFood.Jenis_makanan + "'," + "food_price='" + updateFood.Harga + "' WHERE food_id='" + food_id + "'");
                 status = true;
                 MessageBox.Show("Data berhasil di ubah", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -60,8 +58,7 @@ namespace TB_Pizza.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("DELETE FROM go_miscfood WHERE food_id='"
-                    + food_id + "'"); status = true;
+                koneksi.ExecuteQuery("DELETE FROM go_miscfood WHERE food_id='" + food_id + "'"); status = true;
                 MessageBox.Show("Makanan Dihapus.", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.CloseConnection();

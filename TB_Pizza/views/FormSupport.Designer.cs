@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(364, 107);
             this.label1.TabIndex = 0;
@@ -49,35 +49,35 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 145);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(46, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 23);
+            this.label2.Size = new System.Drawing.Size(51, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nama";
             // 
             // tbNama
             // 
-            this.tbNama.Location = new System.Drawing.Point(118, 148);
+            this.tbNama.Location = new System.Drawing.Point(103, 148);
             this.tbNama.Name = "tbNama";
-            this.tbNama.Size = new System.Drawing.Size(179, 20);
+            this.tbNama.Size = new System.Drawing.Size(239, 20);
             this.tbNama.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(128, 196);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(136, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 20);
+            this.label3.Size = new System.Drawing.Size(117, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Masukkan Anda";
             // 
             // rtbMasukkan
             // 
-            this.rtbMasukkan.Location = new System.Drawing.Point(44, 233);
+            this.rtbMasukkan.Location = new System.Drawing.Point(38, 215);
             this.rtbMasukkan.Name = "rtbMasukkan";
-            this.rtbMasukkan.Size = new System.Drawing.Size(313, 96);
+            this.rtbMasukkan.Size = new System.Drawing.Size(313, 114);
             this.rtbMasukkan.TabIndex = 4;
             this.rtbMasukkan.Text = "";
             // 
@@ -89,6 +89,7 @@
             this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // FormSupport
             // 
@@ -101,6 +102,7 @@
             this.Controls.Add(this.tbNama);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormSupport";
             this.Text = "FormSupport";
             this.ResumeLayout(false);

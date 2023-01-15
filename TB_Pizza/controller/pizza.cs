@@ -19,8 +19,7 @@ namespace TB_Pizza.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("INSERT INTO go_pizza (p_nama_pizza, p_promo, p_harga) VALUES ('"
-                    + AddFood.P_name + "','" + AddFood.P_promo + "," + AddFood.P_price + "')");
+                koneksi.ExecuteQuery("INSERT INTO go_pizza (p_nama_pizza, p_promo, p_harga) VALUES ('" + AddFood.P_name + "','" + AddFood.P_promo + "','" + AddFood.P_price + "')");
                 status = true;
                 MessageBox.Show("Makanan Telah dimasukkan!", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -39,9 +38,7 @@ namespace TB_Pizza.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("UPDATE go_pizza SET p_nama_pizza='"
-                    + updateFood.P_name + "'," + "p_promo='" + updateFood.P_promo + "'," + "p_harga='" + updateFood.P_price + "',"
-                    + "' WHERE food_id='" + p_id + "'");
+                koneksi.ExecuteQuery("UPDATE go_pizza SET p_nama_pizza='" + updateFood.P_name + "'," + "p_promo='" + updateFood.P_promo + "'," + "p_harga='" + updateFood.P_price + "' WHERE food_id='" + p_id + "'");
                 status = true;
                 MessageBox.Show("Data berhasil di ubah", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -59,5 +59,11 @@ namespace TB_Pizza.views
                 this.Hide();
             }
         }
+
+        private void btSupport_Click(object sender, EventArgs e)
+        {
+            Form supportBox = new FormSupport();
+            supportBox.Show();
+        }
     }
 }

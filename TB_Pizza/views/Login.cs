@@ -51,17 +51,5 @@ namespace TB_Pizza
 
             }
         }
-
-        private void cbShowpass_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbShowpass.Checked)
-            {
-                Convert.ToString(tbPass.PasswordChar);
-            }
-            else
-            {
-
-            }
-        }
     }
 }

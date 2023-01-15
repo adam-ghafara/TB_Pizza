@@ -172,6 +172,7 @@
             this.tbFind.Name = "tbFind";
             this.tbFind.Size = new System.Drawing.Size(230, 20);
             this.tbFind.TabIndex = 1;
+            this.tbFind.TextChanged += new System.EventHandler(this.tbFind_TextChanged);
             // 
             // label1
             // 
@@ -204,8 +205,10 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtvPizzaList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PizzaList";
             this.Text = "PizzaList";
+            this.Load += new System.EventHandler(this.PizzaList_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
