@@ -33,6 +33,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbTotal = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.tbTable = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.rtbMisc = new System.Windows.Forms.RichTextBox();
@@ -47,9 +50,6 @@
             this.btUbah = new System.Windows.Forms.Button();
             this.btHapus = new System.Windows.Forms.Button();
             this.btClose = new System.Windows.Forms.Button();
-            this.tbTotal = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtvOrder)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -113,6 +113,31 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detail Pesanan";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(87, 341);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Total";
+            // 
+            // tbTotal
+            // 
+            this.tbTotal.Location = new System.Drawing.Point(90, 357);
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.Size = new System.Drawing.Size(210, 20);
+            this.tbTotal.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(46, 364);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(24, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Rp.";
             // 
             // tbTable
             // 
@@ -235,31 +260,6 @@
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = true;
             // 
-            // tbTotal
-            // 
-            this.tbTotal.Location = new System.Drawing.Point(90, 357);
-            this.tbTotal.Name = "tbTotal";
-            this.tbTotal.Size = new System.Drawing.Size(210, 20);
-            this.tbTotal.TabIndex = 15;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(46, 364);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(24, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Rp.";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(87, 341);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Total";
-            // 
             // adminOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +271,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtvOrder);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "adminOrder";
             this.Text = "adminOrder";
             this.Load += new System.EventHandler(this.adminOrder_Load);

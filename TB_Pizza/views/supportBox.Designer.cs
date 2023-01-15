@@ -138,7 +138,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "supportBox";
-            this.Text = "supportBox";
+            this.Text = "Support Box";
             this.Load += new System.EventHandler(this.supportBox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtvSupportBox)).EndInit();
             this.groupBox1.ResumeLayout(false);

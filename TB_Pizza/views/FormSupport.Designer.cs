@@ -104,7 +104,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormSupport";
-            this.Text = "FormSupport";
+            this.Text = "Support Box";
             this.ResumeLayout(false);
             this.PerformLayout();
 
