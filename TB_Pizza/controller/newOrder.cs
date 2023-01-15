@@ -20,7 +20,7 @@ namespace TB_Pizza.controller
             {
                 koneksi.OpenConnection();
                 koneksi.ExecuteQuery("INSERT INTO go_order (order_name, p_id, order_beverage, order_take, order_table, order_total) VALUES ('"
-                    + newOrder.Nama + "','" + newOrder.Pizza + "," + newOrder.Misc_order + "," + newOrder.Take_order + "," + newOrder.Meja + "," + newOrder.Order_total + "')");
+                    + newOrder.Nama + "','" + newOrder.Pizza + "','" + newOrder.Misc_order + "','" + newOrder.Take_order + "','" + newOrder.Meja + "','" + newOrder.Order_total + "')");
                 status = true;
                 MessageBox.Show("Pesanan telah berhasil di input. Silahkan menunggu untuk pesanan anda!", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

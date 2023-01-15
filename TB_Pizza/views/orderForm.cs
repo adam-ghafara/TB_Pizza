@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,8 +22,6 @@ namespace TB_Pizza.views
         {
             InitializeComponent();
         }
-
-        string order_misc;
         private void button2_Click(object sender, EventArgs e)
         {
             Form mainCustomer = new customerMainForm();
@@ -44,15 +43,31 @@ namespace TB_Pizza.views
             dtvMiscfood.DataSource = connect.ShowData("SELECT * FROM go_miscfood");
 
             // Food Table
-            dtvMiscfood.Columns[0].HeaderText = "No.";
-            dtvMiscfood.Columns[1].HeaderText = "Nama Makanan";
-            dtvMiscfood.Columns[2].HeaderText = "Jenis";
-            dtvMiscfood.Columns[3].HeaderText = "Harga";
+            dtvMiscfood.Columns[0].HeaderText = "Pilihan";
+            dtvMiscfood.Columns[1].HeaderText = "No.";
+            dtvMiscfood.Columns[2].HeaderText = "Nama Makanan";
+            dtvMiscfood.Columns[3].HeaderText = "Jenis Menu";
+            dtvMiscfood.Columns[4].HeaderText = "Harga";
 
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            p_id = dtvPizza.Rows[e.RowIndex].Cells[0].Value.ToString();
+            pizzaprice = dtvPizza.Rows[e.RowIndex].Cells[3].Value.ToString();
+        }
+
+        int pricetotal;
+        string pizzaprice;
+        string miscfoodprice;
+        public void priceoperator()
+        {
+            pricetotal = Convert.ToInt32(pizzaprice) + Convert.ToInt32(miscfoodprice);
+            tbTotal.Text = Convert.ToString(pricetotal);
         }
 
         private void orderForm_Load(object sender, EventArgs e)
         {
+            priceoperator();
             ShowConnect();
         }
         string order_status;
@@ -71,18 +86,25 @@ namespace TB_Pizza.views
             {
                 order_status = "Take Away";
                 rbDine.Checked = false;
+                tbTable.Text = String.Empty;
+                tbTable.Enabled = false;
+            }
+            else
+            {
+                tbTable.Enabled = true;
             }
         }
 
+
         string miscfood_list;
-        string miscfood_idv;
         string listfood = "- ";
         string stringJump = "\n";
         private void dtvMiscfood_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 1 && e.RowIndex != -1)
             {
-
+                miscfood_list = listfood += dtvMiscfood.Rows[e.RowIndex].Cells[1].Value.ToString() + stringJump;
+                miscfoodprice = dtvMiscfood.Rows[e.RowIndex].Cells[4].Value.ToString();
             }
         }
 
@@ -162,7 +184,7 @@ namespace TB_Pizza.views
 
         private void btMakeOrder_Click(object sender, EventArgs e)
         {
-            if (tbName.Text == "" || order_status == "" || tbTable.Text == "" || tbTotal.Text == "" || p_id == "")
+            if (tbName.Text == "" || order_status == "" || tbTotal.Text == "" || p_id == "")
             {
                 MessageBox.Show("Data tidak boleh kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -202,7 +224,6 @@ namespace TB_Pizza.views
             }
 
         }
-
         private void cbCustomPizza_CheckedChanged(object sender, EventArgs e)
         {
             if (cbCustomPizza.Checked)
@@ -215,12 +236,8 @@ namespace TB_Pizza.views
             {
                 dtvPizza.Enabled = true;
                 gbCustom.Enabled = false;
+                decideTopping = "";
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            p_id = dtvPizza.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
     }
 }

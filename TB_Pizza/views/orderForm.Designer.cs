@@ -46,6 +46,7 @@
             this.cbPepperoni = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dtvMiscfood = new System.Windows.Forms.DataGridView();
+            this.colMenucek = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.rbTakeaway = new System.Windows.Forms.RadioButton();
@@ -91,7 +92,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 13);
             this.label8.TabIndex = 5;
-            this.label8.Text = "Rp. 25000";
+            this.label8.Text = "Rp. 70000";
             // 
             // dtvPizza
             // 
@@ -254,11 +255,18 @@
             // dtvMiscfood
             // 
             this.dtvMiscfood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvMiscfood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colMenucek});
             this.dtvMiscfood.Location = new System.Drawing.Point(6, 17);
             this.dtvMiscfood.Name = "dtvMiscfood";
             this.dtvMiscfood.Size = new System.Drawing.Size(397, 112);
             this.dtvMiscfood.TabIndex = 4;
             this.dtvMiscfood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMiscfood_CellContentClick);
+            // 
+            // colMenucek
+            // 
+            this.colMenucek.HeaderText = "Pilihan";
+            this.colMenucek.Name = "colMenucek";
             // 
             // groupBox4
             // 
@@ -377,6 +385,7 @@
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(240, 20);
             this.tbTotal.TabIndex = 6;
+            this.tbTotal.Text = "0";
             // 
             // label4
             // 
@@ -479,5 +488,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dtvPizza;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colMenucek;
     }
 }
