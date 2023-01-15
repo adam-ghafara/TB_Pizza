@@ -96,7 +96,7 @@
             // daftarPesananToolStripMenuItem
             // 
             this.daftarPesananToolStripMenuItem.Name = "daftarPesananToolStripMenuItem";
-            this.daftarPesananToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.daftarPesananToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.daftarPesananToolStripMenuItem.Text = "&Daftar Pesanan";
             this.daftarPesananToolStripMenuItem.Click += new System.EventHandler(this.daftarPesananToolStripMenuItem_Click);
             // 
@@ -135,14 +135,14 @@
             // supportBoxToolStripMenuItem
             // 
             this.supportBoxToolStripMenuItem.Name = "supportBoxToolStripMenuItem";
-            this.supportBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.supportBoxToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.supportBoxToolStripMenuItem.Text = "&Support Box";
             this.supportBoxToolStripMenuItem.Click += new System.EventHandler(this.supportBoxToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -203,6 +203,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminViews";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admins";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

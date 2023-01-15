@@ -207,6 +207,7 @@
             this.Controls.Add(this.dtvPizzaList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PizzaList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Daftar Pizza";
             this.Load += new System.EventHandler(this.PizzaList_Load);
             this.groupBox2.ResumeLayout(false);

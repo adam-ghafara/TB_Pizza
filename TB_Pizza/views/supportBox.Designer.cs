@@ -138,6 +138,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "supportBox";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Support Box";
             this.Load += new System.EventHandler(this.supportBox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtvSupportBox)).EndInit();

@@ -209,7 +209,8 @@
             this.Controls.Add(this.dtvFoodList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MiscFoodList";
-            this.Text = "Menu Lain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Daftar Menu Lain";
             this.Load += new System.EventHandler(this.MiscFoodList_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
