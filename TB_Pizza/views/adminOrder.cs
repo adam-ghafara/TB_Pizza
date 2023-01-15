@@ -56,7 +56,7 @@ namespace TB_Pizza.views
 
         private void btUbah_Click(object sender, EventArgs e)
         {
-            if (tbName.Text == "" || tbOrderstatus.Text == "" || tbTable.Text == "" || rtbPizza.Text == "" || rtbMisc.Text == "" || tbTotal.Text == "")
+            if (tbName.Text == "" || tbOrderstatus.Text == "" || rtbPizza.Text == "" || rtbMisc.Text == "" || tbTotal.Text == "")
             {
                 MessageBox.Show("Data tidak boleh kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -98,6 +98,11 @@ namespace TB_Pizza.views
             tryOrder.Order_total = tbTotal.Text;
 
             LoadOrder();
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

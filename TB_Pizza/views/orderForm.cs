@@ -56,6 +56,18 @@ namespace TB_Pizza.views
             pizzaprice = dtvPizza.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
 
+        string miscfood_list;
+        string listfood = "- ";
+        string stringJump = "\n";
+        private void dtvMiscfood_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((e.ColumnIndex == colMenucek.Index && e.RowIndex != -1))
+            {
+                miscfood_list = listfood += dtvMiscfood.Rows[e.RowIndex].Cells[2].Value.ToString() + stringJump;
+                miscfoodprice = dtvMiscfood.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
+        }
+
         int pricetotal;
         string pizzaprice;
         string miscfoodprice;
@@ -92,19 +104,6 @@ namespace TB_Pizza.views
             else
             {
                 tbTable.Enabled = true;
-            }
-        }
-
-
-        string miscfood_list;
-        string listfood = "- ";
-        string stringJump = "\n";
-        private void dtvMiscfood_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 1 && e.RowIndex != -1)
-            {
-                miscfood_list = listfood += dtvMiscfood.Rows[e.RowIndex].Cells[1].Value.ToString() + stringJump;
-                miscfoodprice = dtvMiscfood.Rows[e.RowIndex].Cells[4].Value.ToString();
             }
         }
 

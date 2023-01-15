@@ -385,7 +385,6 @@
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(240, 20);
             this.tbTotal.TabIndex = 6;
-            this.tbTotal.Text = "0";
             // 
             // label4
             // 
