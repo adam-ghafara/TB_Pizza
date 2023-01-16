@@ -38,5 +38,12 @@ namespace TB_Pizza.views
             this.Hide();
             Main.Show();
         }
+
+        private void btLogin_Click(object sender, EventArgs e)
+        {
+            Form backLogin = new Login();
+            backLogin.Show();
+            this.Hide();
+        }
     }
 }

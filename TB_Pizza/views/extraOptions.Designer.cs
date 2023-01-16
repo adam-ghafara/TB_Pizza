@@ -42,6 +42,7 @@
             this.btLogin.TabIndex = 0;
             this.btLogin.Text = "Login";
             this.btLogin.UseVisualStyleBackColor = true;
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // btAdminForm
             // 
