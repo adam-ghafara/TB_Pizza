@@ -19,8 +19,8 @@ namespace TB_Pizza.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("INSERT INTO go_order (order_name, p_id, order_beverage, order_take, order_table, order_total) VALUES ('"
-                    + newOrder.Nama + "','" + newOrder.Pizza + "','" + newOrder.Misc_order + "','" + newOrder.Take_order + "','" + newOrder.Meja + "','" + newOrder.Order_total + "')");
+                koneksi.ExecuteQuery("INSERT INTO go_order (order_date, order_name, order_take, order_table, p_id, p_nama_pizza, order_pizza_topping, order_beverage, order_total) VALUES ('"
+                 + "now()" + ",'" + newOrder.Nama + "','" + newOrder.Take_order + "','" + newOrder.Meja + "','" + newOrder.P_id + "','" + newOrder.Pizza + "','" + newOrder.P_custom + "','" + newOrder.Misc_order + "','" + newOrder.Order_total + "')");
                 status = true;
                 MessageBox.Show("Pesanan telah berhasil di input. Silahkan menunggu untuk pesanan anda!", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -39,11 +39,12 @@ namespace TB_Pizza.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("UPDATE go_order SET order_name='"
-                    + updateOrder.Nama + "'," + "order_table='" + updateOrder.Meja + "'," + "p_id='" + updateOrder.Pizza + "',"
-                    + "' WHERE order_id='" + order_id + "'");
+                koneksi.ExecuteQuery("UPDATE go_order SET order_name='" + updateOrder.Nama + "'," + "order_take='" + updateOrder.Take_order + "'," 
+                    + "order_table='" + updateOrder.Meja + "'," + "p_id='" + updateOrder.P_id + "'," + "p_nama_pizza='" + updateOrder.Pizza + "'," 
+                    + "order_pizza_topping='" + updateOrder.P_custom + "'," + "order_beverage='" + updateOrder.Misc_order + "'," + "order_total='" 
+                    + updateOrder.Order_total + "' WHERE order_id='" + order_id + "'");
                 status = true;
-                MessageBox.Show("Data berhasil di ubah", "Informasi",
+                MessageBox.Show("Data berhasil di ubah!", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 koneksi.CloseConnection();
             }

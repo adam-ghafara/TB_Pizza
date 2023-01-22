@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.quotelabel = new System.Windows.Forms.Label();
             this.btQuote = new System.Windows.Forms.Button();
+            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +89,8 @@
             // pesananToolStripMenuItem
             // 
             this.pesananToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.daftarPesananToolStripMenuItem});
+            this.daftarPesananToolStripMenuItem,
+            this.historyToolStripMenuItem});
             this.pesananToolStripMenuItem.Name = "pesananToolStripMenuItem";
             this.pesananToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.pesananToolStripMenuItem.Text = "&Pesanan";
@@ -96,7 +98,7 @@
             // daftarPesananToolStripMenuItem
             // 
             this.daftarPesananToolStripMenuItem.Name = "daftarPesananToolStripMenuItem";
-            this.daftarPesananToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.daftarPesananToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.daftarPesananToolStripMenuItem.Text = "&Daftar Pesanan";
             this.daftarPesananToolStripMenuItem.Click += new System.EventHandler(this.daftarPesananToolStripMenuItem_Click);
             // 
@@ -135,14 +137,14 @@
             // supportBoxToolStripMenuItem
             // 
             this.supportBoxToolStripMenuItem.Name = "supportBoxToolStripMenuItem";
-            this.supportBoxToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.supportBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.supportBoxToolStripMenuItem.Text = "&Support Box";
             this.supportBoxToolStripMenuItem.Click += new System.EventHandler(this.supportBoxToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -188,6 +190,13 @@
             this.btQuote.UseVisualStyleBackColor = true;
             this.btQuote.Click += new System.EventHandler(this.btQuote_Click);
             // 
+            // historyToolStripMenuItem
+            // 
+            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.historyToolStripMenuItem.Text = "&History";
+            this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
+            // 
             // AdminViews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,5 +240,6 @@
         private System.Windows.Forms.Label quotelabel;
         private System.Windows.Forms.Button btQuote;
         private System.Windows.Forms.ToolStripMenuItem daftarPizzaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historyToolStripMenuItem;
     }
 }

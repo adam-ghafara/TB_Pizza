@@ -76,5 +76,12 @@ namespace TB_Pizza.views
             mainForm.Show();
             this.Hide();
         }
+
+        private void historyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form HistoryBox = new orderHistory();
+            HistoryBox.Show();
+            this.Hide();
+        }
     }
 }

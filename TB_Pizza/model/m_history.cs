@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace TB_Pizza.model
 {
-    internal class m_order
+    internal class m_history
     {
-        string nama, take_order, meja, p_id, pizza, p_custom, misc_order, order_total;
+        string tanggal, nama, take_order, meja, p_id, pizza, p_custom, misc_order, order_total;
 
+        public string Tanggal { get => tanggal; set => tanggal = value; }
         public string Nama { get => nama; set => nama = value; }
         public string Take_order { get => take_order; set => take_order = value; }
         public string Meja { get => meja; set => meja = value; }
@@ -19,8 +20,9 @@ namespace TB_Pizza.model
         public string Misc_order { get => misc_order; set => misc_order = value; }
         public string Order_total { get => order_total; set => order_total = value; }
 
-        public m_order(string nama, string take_order, string meja, string p_id, string pizza, string p_custom, string misc_order, string order_total)
+        public m_history(string tanggal, string nama, string take_order, string meja, string p_id, string pizza, string p_custom, string misc_order, string order_total)
         {
+            this.Tanggal = tanggal;
             this.Nama = nama;
             this.Take_order = take_order;
             this.Meja = meja;
@@ -31,7 +33,7 @@ namespace TB_Pizza.model
             this.Order_total = order_total;
         }
 
-        public m_order()
+        public m_history()
         {
 
         }

@@ -85,11 +85,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controller\connection.cs" />
+    <Compile Include="controller\history.cs" />
     <Compile Include="controller\logging.cs" />
     <Compile Include="controller\miscfood.cs" />
     <Compile Include="controller\newOrder.cs" />
     <Compile Include="controller\pizza.cs" />
     <Compile Include="controller\support.cs" />
+    <Compile Include="model\m_history.cs" />
     <Compile Include="model\m_pizza.cs" />
     <Compile Include="model\m_support.cs" />
     <Compile Include="views\FormSupport.cs">
@@ -118,12 +120,6 @@
     </Compile>
     <Compile Include="views\AdminViews.Designer.cs">
       <DependentUpon>AdminViews.cs</DependentUpon>
-    </Compile>
-    <Compile Include="views\consoleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\consoleForm.Designer.cs">
-      <DependentUpon>consoleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="views\customerMainForm.cs">
       <SubType>Form</SubType>
@@ -157,6 +153,12 @@
     <Compile Include="views\orderForm.Designer.cs">
       <DependentUpon>orderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\orderHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\orderHistory.Designer.cs">
+      <DependentUpon>orderHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\PizzaList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,9 +183,6 @@
     <EmbeddedResource Include="views\AdminViews.resx">
       <DependentUpon>AdminViews.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\consoleForm.resx">
-      <DependentUpon>consoleForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="views\customerMainForm.resx">
       <DependentUpon>customerMainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\orderForm.resx">
       <DependentUpon>orderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\orderHistory.resx">
+      <DependentUpon>orderHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\PizzaList.resx">
       <DependentUpon>PizzaList.cs</DependentUpon>

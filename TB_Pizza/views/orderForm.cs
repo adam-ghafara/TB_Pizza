@@ -18,6 +18,7 @@ namespace TB_Pizza.views
         connection connect = new connection();
         newOrder doOrder = new newOrder();
         string p_id;
+        string pizza_name;
         public orderForm()
         {
             InitializeComponent();
@@ -53,6 +54,7 @@ namespace TB_Pizza.views
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             p_id = dtvPizza.Rows[e.RowIndex].Cells[0].Value.ToString();
+            pizza_name = dtvPizza.Rows[e.RowIndex].Cells[1].Value.ToString();
             pizzaprice = dtvPizza.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
 
@@ -197,7 +199,9 @@ namespace TB_Pizza.views
                     tryOrder.Nama = tbName.Text;
                     tryOrder.Take_order = order_status;
                     tryOrder.Meja = tbTable.Text;
-                    tryOrder.Pizza = p_id;
+                    tryOrder.P_id = p_id;
+                    tryOrder.Pizza = pizza_name;
+                    tryOrder.P_custom = decideTopping;
                     tryOrder.Misc_order = miscfood_list;
                     tryOrder.Order_total = tbTotal.Text;
 
@@ -207,6 +211,8 @@ namespace TB_Pizza.views
                     order_status = "";
                     tbTable.Text = "";
                     p_id = "";
+                    pizza_name = "";
+                    decideTopping = "";
                     miscfood_list = "";
                     tbTotal.Text = "";
 
