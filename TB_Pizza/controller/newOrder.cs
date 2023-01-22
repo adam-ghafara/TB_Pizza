@@ -20,7 +20,7 @@ namespace TB_Pizza.controller
             {
                 koneksi.OpenConnection();
                 koneksi.ExecuteQuery("INSERT INTO go_order (order_date, order_name, order_take, order_table, p_id, p_nama_pizza, order_pizza_topping, order_beverage, order_total) VALUES ('"
-                 + "now()" + ",'" + newOrder.Nama + "','" + newOrder.Take_order + "','" + newOrder.Meja + "','" + newOrder.P_id + "','" + newOrder.Pizza + "','" + newOrder.P_custom + "','" + newOrder.Misc_order + "','" + newOrder.Order_total + "')");
+                 + "DATE: Auto CURDATE()" + "','" + newOrder.Nama + "','" + newOrder.Take_order + "','" + newOrder.Meja + "','" + newOrder.P_id + "','" + newOrder.Pizza + "','" + newOrder.P_custom + "','" + newOrder.Misc_order + "','" + newOrder.Order_total + "')");
                 status = true;
                 MessageBox.Show("Pesanan telah berhasil di input. Silahkan menunggu untuk pesanan anda!", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -61,7 +61,7 @@ namespace TB_Pizza.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("DELETE FROM go_order WHERE order_id='"
+                koneksi.ExecuteQuery("DELETE * FROM go_order WHERE order_id='"
                     + order_id + "'"); status = true;
                 MessageBox.Show("Order berhasil dihapus", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

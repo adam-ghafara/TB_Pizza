@@ -19,8 +19,8 @@ namespace TB_Pizza.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("INSERT INTO go_order (order_date, order_name, order_take, order_table, p_id, p_nama_pizza, order_pizza_topping, order_beverage, order_total) VALUES ('"
-                 + history.Tanggal + ",'" + history.Nama + "','" + history.Take_order + "','" + history.Meja + "','" + history.P_id + "','" + history.Pizza + "','" + history.P_custom + "','" + history.Misc_order + "','" + history.Order_total + "')");
+                koneksi.ExecuteQuery("INSERT INTO go_history (order_date, order_name, order_take, order_table, p_id, p_nama_pizza, order_pizza_topping, order_beverage, order_total) VALUES ('"
+                 + history.Tanggal + "','" + history.Nama + "','" + history.Take_order + "','" + history.Meja + "','" + history.P_id + "','" + history.Pizza + "','" + history.P_custom + "','" + history.Misc_order + "','" + history.Order_total + "')");
                 status = true;
                 MessageBox.Show("Pemesanan telah di transfer ke History!", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -39,7 +39,7 @@ namespace TB_Pizza.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("DELETE FROM go_order WHERE history_id='"
+                koneksi.ExecuteQuery("DELETE * FROM go_order WHERE history_id='"
                     + history_id + "'"); status = true;
                 MessageBox.Show("History Pemesanan dihapus", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -53,5 +53,4 @@ namespace TB_Pizza.controller
             return status;
         }
     }
-}
 }

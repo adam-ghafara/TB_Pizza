@@ -27,7 +27,7 @@ namespace TB_Pizza.views
         public void LoadOrder()
         {
             // Load Database
-            dtvOrder.DataSource = connect.ShowData("SELECT * FROM go_order");
+            dtvOrder.DataSource = connect.ShowData("SELECT order_id, order_date, order_name, order_take, order_table, go_order.p_id, p_nama_pizza, order_pizza_topping, order_beverage, order_total FROM go_order JOIN go_pizza ON go_pizza.p_id = go_order.p_id");
 
             // Tables
             dtvOrder.Columns[0].HeaderText = "ID";
@@ -54,9 +54,22 @@ namespace TB_Pizza.views
             connect.CloseConnection();
         }
 
+        public void GetPizzaName()
+        {
+            connect.OpenConnection();
+            MySqlDataReader reader = connect.reader("SELECT p_nama_pizza FROM go_pizza " +
+                "WHERE p_id= '" + cbIDPizza.Text + "'");
+            while (reader.Read())
+            {
+                tbPizza.Text = reader.GetString(0);
+            }
+            connect.CloseConnection();
+        }
+        string orderDate;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             order_id = dtvOrder.Rows[e.RowIndex].Cells[0].Value.ToString();
+            orderDate = dtvOrder.Rows[e.RowIndex].Cells[1].Value.ToString();
             tbName.Text = dtvOrder.Rows[e.RowIndex].Cells[2].Value.ToString();
             tbOrderstatus.Text = dtvOrder.Rows[e.RowIndex].Cells[3].Value.ToString();
             tbTable.Text = dtvOrder.Rows[e.RowIndex].Cells[4].Value.ToString();
@@ -140,6 +153,7 @@ namespace TB_Pizza.views
             else
             {
                 m_history getTransferData = new m_history();
+                getTransferData.Tanggal = 
                 getTransferData.Nama = tbName.Text;
                 getTransferData.Take_order = tbOrderstatus.Text;
                 getTransferData.Meja = tbTable.Text;

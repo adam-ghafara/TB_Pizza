@@ -116,14 +116,14 @@ namespace TB_Pizza.views
         {
             if (cbPepperoni.Checked)
             {
-                decideTopping += cbPepperoni.Text + stringJump;
+                decideTopping += cbPepperoni.Text;
             }
         }
         private void cbOlive_CheckedChanged(object sender, EventArgs e)
         {
             if (cbOlive.Checked)
             {
-                decideTopping += seperator + cbOlive.Text + stringJump;
+                decideTopping += seperator + cbOlive.Text;
             }
         }
 
@@ -131,7 +131,7 @@ namespace TB_Pizza.views
         {
             if (cbMozarella.Checked)
             {
-                decideTopping += seperator + cbMozarella.Text + stringJump ;
+                decideTopping += seperator + cbMozarella.Text;
             }
         }
 
@@ -139,7 +139,7 @@ namespace TB_Pizza.views
         {
             if (cbCheddar.Checked)
             {
-                decideTopping += seperator + cbCheddar.Text + stringJump;
+                decideTopping += seperator + cbCheddar.Text;
             }
         }
 
@@ -147,7 +147,7 @@ namespace TB_Pizza.views
         {
             if (cbSausage.Checked)
             {
-                decideTopping += seperator + cbSausage.Text + stringJump;
+                decideTopping += seperator + cbSausage.Text;
             }
         }
 
@@ -155,7 +155,7 @@ namespace TB_Pizza.views
         {
             if (cbPizzaSos.Checked)
             {
-                decideTopping += seperator + cbPizzaSos.Text + stringJump;
+                decideTopping += seperator + cbPizzaSos.Text;
             }
         }
 
@@ -163,7 +163,7 @@ namespace TB_Pizza.views
         {
             if (cbOnion.Checked)
             {
-                decideTopping += seperator + cbOnion.Text + stringJump;
+                decideTopping += seperator + cbOnion.Text;
             }
         }
 
@@ -171,7 +171,7 @@ namespace TB_Pizza.views
         {
             if (cbTuna.Checked)
             {
-                decideTopping += seperator + cbTuna.Text + stringJump;
+                decideTopping += seperator + cbTuna.Text;
             }
         }
 
@@ -179,7 +179,7 @@ namespace TB_Pizza.views
         {
             if (cbPineappel.Checked)
             {
-                decideTopping += seperator + cbPineappel.Text + stringJump;
+                decideTopping += seperator + cbPineappel.Text;
             }
         }
 
@@ -236,6 +236,7 @@ namespace TB_Pizza.views
                 dtvPizza.Enabled = false;
                 gbCustom.Enabled = true;
                 p_id = "101";
+                pizza_name = "Custom Pizza";
             }
             else
             {
